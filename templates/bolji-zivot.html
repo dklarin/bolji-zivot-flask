@@ -4,34 +4,59 @@
 
 <div class="container">
     <div class="row">
+        <!--STUPAC 1-->
         <div class="col-md-2 sidenav"></div>
 
+        <!--STUPAC 2-->
         <div class="col-md-8 text-center">
             <div class="page-header">
+                <h1>{{trazeni_redak.korisnik}}</h1>
+                <!--SVE SKUPA-->
                 <div class="row">
-                    <ul>
-                        <table class="table table-bordered table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Redni broj</th>
-                                    <th>Doručak</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for lis in svi_retci%}
-                                <tr>
-                                    <td>{{lis.redni_broj}}</td>
-                                    <td>{{lis.dorucak}}</td>
-                                </tr>
-                                {%endfor%}
-                            </tbody>
-                        </table>
-                    </ul>
+                    <div class="form-group">
+                        <div class="moja">
+                            <ul>
+                                <table class="table table-bordered table-striped">
+                                    <tr>
+                                        <th>Dan:</th>
+                                        <td>{{trazeni_redak.redni_broj}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Doručak:</th>
+                                        <td>{{trazeni_redak.dorucak}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Korisnik:</th>
+                                        <td>{{trazeni_redak.dorucak}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Datum prijave kvara:</th>
+                                        <!--Filter-->
+                                        <td>{{trazeni_redak.dorucak | capitalize}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Usluga:</th>
+                                        <td>{{trazeni_redak.dorucak}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Naplata:</th>
+                                        <td>{{trazeni_redak.dorucak}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Iznos:</th>
+                                        <td>{{trazeni_redak.dorucak}}</td>
+                                    </tr>
 
+                                </table>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                <!--SVE SKUPA-->
             </div>
         </div>
 
+        <!--STUPAC 3-->
         <div class="col-md-2 sidenav"></div>
     </div>
 </div>

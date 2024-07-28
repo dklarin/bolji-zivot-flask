@@ -13,4 +13,4 @@ def sve_bolji_zivot():
 
     svi_retci = wks.get_all_records()  
 
-    return render_template('bolji-zivot.html', svi_retci=svi_retci)
+    return render_template('bolji-zivoti.html', svi_retci=svi_retci)
