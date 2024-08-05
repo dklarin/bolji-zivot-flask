@@ -1,39 +1,42 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-2 sidenav"></div>
+  <div class="row">
+    <div class="col-md-2 sidenav"></div>
 
-        <div class="col-md-8 text-center">
-            <div class="page-header">
-                <div class="row">
-                    <ul>
-                        <table class="table table-bordered table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Redni broj</th>
-                                    <th>Doručak</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for lis in svi_retci%}
-                                <tr>
-                                    <td>{{lis.redni_broj}}</td>
-                                    <td>{{lis.dorucak}}</td>
-                                </tr>
-                                {%endfor%}
-                            </tbody>
-                        </table>
-                    </ul>
-
-                </div>
-            </div>
+    <div class="col-md-8 text-center">
+      <div class="page-header">
+        <div class="row">
+          <ul>
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Redni broj</th>
+                  <th>Datum</th>
+                  <th>Doručak</th>
+                  <th>Orasi</th>
+                  <th>Bioaktiv</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lis in svi_retci%}
+                <tr onclick="window.location.href = '/dan/{{lis.redni_broj}}';">
+                  <td>{{lis.redni_broj}}</td>
+                  <td>{{lis.datum}}</td>
+                  <td>{{lis.dorucak}}</td>
+                  <td>{{lis.orasi}}</td>
+                  <td>{{lis.bioaktiv}}</td>
+                </tr>
+                {%endfor%}
+              </tbody>
+            </table>
+          </ul>
         </div>
-
-        <div class="col-md-2 sidenav"></div>
+      </div>
     </div>
+
+    <div class="col-md-2 sidenav"></div>
+  </div>
 </div>
 
 {% endblock %}

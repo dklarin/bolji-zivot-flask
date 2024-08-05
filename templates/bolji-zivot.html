@@ -1,64 +1,65 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div class="container">
-    <div class="row">
-        <!--STUPAC 1-->
-        <div class="col-md-2 sidenav"></div>
+  <div class="row">
+    <!--STUPAC 1-->
+    <div class="col-md-2 sidenav"></div>
 
-        <!--STUPAC 2-->
-        <div class="col-md-8 text-center">
-            <div class="page-header">
-                <h1>{{trazeni_redak.korisnik}}</h1>
-                <!--SVE SKUPA-->
-                <div class="row">
-                    <div class="form-group">
-                        <div class="moja">
-                            <ul>
-                                <table class="table table-bordered table-striped">
-                                    <tr>
-                                        <th>Dan:</th>
-                                        <td>{{trazeni_redak.redni_broj}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Doručak:</th>
-                                        <td>{{trazeni_redak.dorucak}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Korisnik:</th>
-                                        <td>{{trazeni_redak.dorucak}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Datum prijave kvara:</th>
-                                        <!--Filter-->
-                                        <td>{{trazeni_redak.dorucak | capitalize}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Usluga:</th>
-                                        <td>{{trazeni_redak.dorucak}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Naplata:</th>
-                                        <td>{{trazeni_redak.dorucak}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Iznos:</th>
-                                        <td>{{trazeni_redak.dorucak}}</td>
-                                    </tr>
-
-                                </table>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--SVE SKUPA-->
+    <!--STUPAC 2-->
+    <div class="col-md-8 text-center">
+      <div class="page-header">
+        <h1>{{trazeni_redak.korisnik}}</h1>
+        <!--SVE SKUPA-->
+        <div class="row">
+          <div class="form-group">
+            <div class="moja">
+              <ul>
+                <table class="table table-bordered table-striped">
+                  <tr>
+                    <th>Dan:</th>
+                    <td>{{trazeni_redak.redni_broj}}</td>
+                  </tr>
+                  <tr>
+                    <th>Datum:</th>
+                    <td>{{trazeni_redak.datum}}</td>
+                  </tr>
+                  <tr>
+                    <th>Doručak:</th>
+                    <td>{{trazeni_redak.dorucak}}</td>
+                  </tr>
+                  <tr>
+                    <th>Orasi:</th>
+                    <!--Filter-->
+                    <td>{{trazeni_redak.orasi | capitalize}}</td>
+                  </tr>
+                  <tr>
+                    <th>Bioaktiv:</th>
+                    <td>{{trazeni_redak.bioaktiv}}</td>
+                  </tr>
+                  <tr>
+                    <th>Trbušnjaci:</th>
+                    <td>{{trazeni_redak.trbušnjaci}}</td>
+                  </tr>
+                  <tr>
+                    <th>Nokti šake:</th>
+                    <td>{{trazeni_redak.nokti_sake}}</td>
+                  </tr>
+                  <tr>
+                    <th>Nokti stopala:</th>
+                    <td>{{trazeni_redak.nokti_stopala}}</td>
+                  </tr>
+                </table>
+              </ul>
             </div>
+          </div>
         </div>
-
-        <!--STUPAC 3-->
-        <div class="col-md-2 sidenav"></div>
+        <!--SVE SKUPA-->
+      </div>
     </div>
+
+    <!--STUPAC 3-->
+    <div class="col-md-2 sidenav"></div>
+  </div>
 </div>
 
 {% endblock %}
